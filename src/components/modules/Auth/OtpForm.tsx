@@ -12,7 +12,6 @@ type OtpFormType = {
 
 export default function OtpForm() {
   const router = useRouter();
-
   const [email, setEmail] = useState("");
   const [serverError, setServerError] = useState("");
   const [timer, setTimer] = useState(60);
@@ -25,26 +24,22 @@ export default function OtpForm() {
     formState: { isSubmitting },
   } = useForm<OtpFormType>();
 
-  // Get email from localStorage
   useEffect(() => {
     const storedEmail = localStorage.getItem("verifyEmail");
     if (storedEmail) setEmail(storedEmail);
   }, []);
 
-  // Timer countdown
   useEffect(() => {
     if (timer <= 0) return;
-
     const interval = setInterval(() => {
       setTimer((prev) => prev - 1);
     }, 1000);
-
     return () => clearInterval(interval);
   }, [timer]);
 
-  // OTP input auto move + restrict digits
   const handleOtpChange = (value: string) => {
     const digitsOnly = value.replace(/\D/g, "").slice(0, 6);
+    console.log(digitsOnly, "hds");
     setValue("otp", digitsOnly);
   };
 
@@ -52,10 +47,13 @@ export default function OtpForm() {
     setServerError("");
 
     try {
-      await api.post("/verify-otp", {
-        email,
-        otp: data.otp,
-      });
+      const formData = new FormData();
+      formData.append("email", email);
+      formData.append("otp", data.otp);
+
+      await api.post("/verify_otp", formData);
+
+      localStorage.removeItem("verifyEmail");
 
       router.push("/login");
     } catch (err: any) {
@@ -69,7 +67,10 @@ export default function OtpForm() {
     try {
       setResending(true);
 
-      await api.post("/resend-otp", { email });
+      const formData = new FormData();
+      formData.append("email", email);
+
+      await api.post("/resend_otp", formData);
 
       setTimer(60);
     } catch (err: any) {
@@ -115,7 +116,6 @@ export default function OtpForm() {
         </button>
       </form>
 
-      {/* Resend OTP */}
       <div className="mt-5 text-sm">
         {timer > 0 ? (
           <p className="text-gray-500">Resend OTP in {timer}s</p>

@@ -6,7 +6,6 @@ import { api } from "@/lib/api";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Link from "next/link";
-import { FaGoogle, FaGithub } from "react-icons/fa6";
 
 type LoginType = {
   email: string;
@@ -26,12 +25,17 @@ export default function LoginForm() {
   const onSubmit = async (data: LoginType) => {
     setError("");
     try {
-      const res = await api.post("/login", data);
+      const formData = new FormData();
+      formData.append("email", data.email);
+      formData.append("password", data.password);
+      formData.append("remember_me", "true");
+
+      const res = await api.post("/login", formData);
       const token = res.data?.token;
 
       if (!token) throw new Error("Token not found");
 
-      document.cookie = `token=${token}; path=/`;
+      document.cookie = `token=${token}; path=/; max-age=864000`;
       router.push("/");
     } catch (err: any) {
       setError(err?.response?.data?.message || "Login failed");
