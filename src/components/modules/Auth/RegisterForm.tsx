@@ -42,7 +42,7 @@ export default function RegisterForm() {
       localStorage.setItem("verifyEmail", data.email);
       console.log("hello", api_key);
       toast.success("Register successfully");
-      // router.push("/verify-otp");
+      router.push("/verify-otp");
     } catch (err: any) {
       setServerError(err?.response?.data?.message || "Registration failed");
       toast.error("Register failed");
