@@ -146,12 +146,6 @@ PowerGrid Fitness is a modern, responsive web application designed for fitness e
 └── tsconfig.json
 </code></pre>
 
-<h2>⚙️ Environment Variables</h2>
-
-<p>Create a <code>.env.local</code> file in the root directory:</p>
-
-<pre><code>NEXT_PUBLIC_API_URL=your_api_url_here</code></pre>
-
 <h2>📌 Scripts Overview</h2>
 
 <ul>
