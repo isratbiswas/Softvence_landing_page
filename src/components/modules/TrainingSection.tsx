@@ -61,7 +61,7 @@ const TrainingSection = () => {
           className="lg:col-span-4 relative h-[400px] md:h-[500px] w-full rounded-[30px] overflow-hidden"
         >
           <Image
-            src="https://i.pinimg.com/736x/6c/21/9c/6c219c5299a4da4fb30efe7fa699c672.jpg"
+            src="/assets/trainer.png"
             alt="Boxing Trainer"
             fill
             className="object-cover"

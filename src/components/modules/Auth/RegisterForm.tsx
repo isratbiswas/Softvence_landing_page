@@ -177,11 +177,11 @@ export default function RegisterForm() {
                   className="mt-1 w-4 h-4 accent-[#84cc16] rounded border-gray-800 bg-[#111]"
                 />
                 <span className="text-gray-500 text-xs leading-relaxed">
-                  I agree to the{" "}
+                  I agree to the
                   <span className="text-white font-bold group-hover:underline">
                     Terms of Service
-                  </span>{" "}
-                  and{" "}
+                  </span>
+                  and
                   <span className="text-white font-bold group-hover:underline">
                     Privacy Policy
                   </span>

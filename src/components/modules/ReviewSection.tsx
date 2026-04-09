@@ -7,12 +7,12 @@ import { IoStarHalf } from "react-icons/io5";
 import { motion, Variants, easeOut } from "framer-motion";
 
 const reviews = [
-  { id: 1, img: "https://i.pravatar.cc/150?u=1" },
-  { id: 2, img: "https://i.pravatar.cc/150?u=2" },
-  { id: 3, img: "https://i.pravatar.cc/150?u=3" },
-  { id: 4, img: "https://i.pravatar.cc/150?u=4" },
-  { id: 5, img: "https://i.pravatar.cc/150?u=5" },
-  { id: 6, img: "https://i.pravatar.cc/150?u=6" },
+  { id: 1, img: "/assets/man.png " },
+  { id: 2, img: "/assets/man (1).png" },
+  { id: 3, img: "/assets/man (2).png" },
+  { id: 4, img: "/assets/man (3).png" },
+  { id: 5, img: "/assets/man (4).png" },
+  { id: 6, img: "/assets/man (5).png" },
 ];
 
 // Animation variants
