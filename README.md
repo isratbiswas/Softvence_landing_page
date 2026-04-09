@@ -4,81 +4,130 @@ PowerGrid Fitness is a modern, responsive web application designed for fitness e
 
 <h4>Live Link:<a href="https://powergrid-fitness.vercel.app/">PowerGrid Fitness</a></h4>
 
-🚀 Tech Stack
-Frontend Framework: Next.js (App Router)
-Language: TypeScript
-UI Library: React
-Styling: Tailwind CSS
-Animations: Framer Motion
-Form Handling: React Hook Form
-HTTP Client: Axios
-Notifications: Sonner
-Icons: React Icons
-✨ Features
-⚡ Fast and optimized performance with Next.js
-🎨 Modern UI with Tailwind CSS
-📱 Fully responsive design
-🔄 Smooth animations using Framer Motion
-🧾 Form handling with validation (React Hook Form)
-🔔 Toast notifications for user feedback
-🌐 API integration using Axios
-🧩 Modular and scalable component architecture
-📦 Installation
+<h2>🛠️ Tech Stack</h2>
 
-1. Clone the repository
-   git clone https://github.com/your-username/powergrid_fitness.git
-   cd powergrid_fitness
-2. Install dependencies
-   npm install
+<ul>
+  <li><strong>Frontend Framework:</strong> Next.js (App Router)</li>
+  <li><strong>Language:</strong> TypeScript</li>
+  <li><strong>UI Library:</strong> React</li>
+  <li><strong>Styling:</strong> Tailwind CSS</li>
+  <li><strong>Animations:</strong> Framer Motion</li>
+  <li><strong>Form Handling:</strong> React Hook Form</li>
+  <li><strong>HTTP Client:</strong> Axios</li>
+  <li><strong>Notifications:</strong> Sonner</li>
+  <li><strong>Icons:</strong> React Icons</li>
+</ul>
+<h2>✨ Features</h2>
 
-or
+<ul>
+  <li>⚡ Fast and optimized performance with Next.js</li>
+  <li>🎨 Modern UI with Tailwind CSS</li>
+  <li>📱 Fully responsive design</li>
+  <li>🔄 Smooth animations using Framer Motion</li>
+  <li>🧾 Form handling with validation (React Hook Form)</li>
+  <li>🔔 Toast notifications for user feedback</li>
+  <li>🌐 API integration using Axios</li>
+  <li>🧩 Modular and scalable component architecture</li>
+</ul>
 
-yarn install
-▶️ Running the Application
-Development mode
-npm run dev
+<h2>📦 Installation</h2>
 
-The app will run at:
+<ol>
+  <li>
+    Clone the repository
+    <ul>
+      <li>
+        <code>git clone https://github.com/isratbiswas/powergrid_fitness.git</code>
+      </li>
+      <li>
+        <code>cd powergrid_fitness</code>
+      </li>
+    </ul>
+  </li>
 
-http://localhost:3000
-Production build
-npm run build
-Start production server
-npm run start
-🧪 Linting
-npm run lint
-📁 Project Structure (Example)
-powergrid_fitness/
-├── app/ # Next.js app router pages
-├── components/ # Reusable UI components
-├── lib/ # Utility functions & API config
-├── public/ # Static assets
-├── styles/ # Global styles
-├── types/ # TypeScript types
+  <li>
+    Install dependencies
+    <ul>
+      <li><code>npm install</code></li>
+      <li><strong>or</strong></li>
+      <li><code>yarn install</code></li>
+    </ul>
+  </li>
+</ol>
+
+<h2>▶️ Running the Application</h2>
+
+<ul>
+  <li>
+    <strong>Development mode:</strong>
+    <ul>
+      <li><code>npm run dev</code></li>
+      <li>The app will run at: <code>http://localhost:3000</code></li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>Production build:</strong>
+    <ul>
+      <li><code>npm run build</code></li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>Start production server:</strong>
+    <ul>
+      <li><code>npm run start</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h2>🧪 Linting</h2>
+
+<ul>
+  <li><code>npm run lint</code></li>
+</ul>
+<h2>📁 Project Structure (Example)</h2>
+
+<pre><code>powergrid_fitness/
+├── app/
+├── public/
+├── styles/
+├── types/
 └── package.json
-⚙️ Environment Variables
+</code></pre>
 
-Create a .env.local file in the root directory:
+<h2>⚙️ Environment Variables</h2>
 
-NEXT_PUBLIC_API_URL=your_api_url_here
-📌 Scripts Overview
-Command Description
-npm run dev Runs the app in development mode
-npm run build Builds the app for production
-npm run start Starts the production server
-npm run lint Runs ESLint checks
-🤝 Contributing
+<p>Create a <code>.env.local</code> file in the root directory:</p>
 
-Contributions are welcome!
+<pre><code>NEXT_PUBLIC_API_URL=your_api_url_here</code></pre>
 
-Fork the repository
-Create a new branch
-Make your changes
-Submit a pull request
-📄 License
+<h2>📌 Scripts Overview</h2>
 
-This project is licensed under the MIT License.
+<ul>
+  <li><strong>npm run dev</strong> — Runs the app in development mode</li>
+  <li><strong>npm run build</strong> — Builds the app for production</li>
+  <li><strong>npm run start</strong> — Starts the production server</li>
+  <li><strong>npm run lint</strong> — Runs ESLint checks</li>
+</ul>
 
-👨‍💻 Author
+<h2>🤝 Contributing</h2>
 
+<p>Contributions are welcome!</p>
+
+<ul>
+  <li>Fork the repository</li>
+  <li>Create a new branch</li>
+  <li>Make your changes</li>
+  <li>Submit a pull request</li>
+</ul>
+
+<h2>📄 License</h2>
+
+<p>This project is licensed under the MIT License.</p>
+
+<h2>👨‍💻 Author</h2>
+
+<p>
 Developed by a passionate full-stack developer focused on building scalable and modern web applications.
+</p>
