@@ -89,11 +89,61 @@ PowerGrid Fitness is a modern, responsive web application designed for fitness e
 <h2>📁 Project Structure (Example)</h2>
 
 <pre><code>powergrid_fitness/
-├── app/
+├── .next/
+├── .vercel/
+├── node_modules/
 ├── public/
-├── styles/
-├── types/
-└── package.json
+├── src/
+│   ├── app/
+│   │   ├── (auth)/
+│   │   │   ├── login/
+│   │   │   │   └── page.tsx
+│   │   │   ├── register/
+│   │   │   │   └── page.tsx
+│   │   │   └── verify-otp/
+│   │   │       └── page.tsx
+│   │   ├── favicon.ico
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
+│   │
+│   ├── components/
+│   │   ├── layout/
+│   │   │   ├── InitialLoader.tsx
+│   │   │   ├── Navbar.tsx
+│   │   │   └── Footer.tsx
+│   │
+│   ├── modules/
+│   │   ├── Auth/
+│   │   │   ├── LoginForm.tsx
+│   │   │   ├── OtpForm.tsx
+│   │   │   └── RegisterForm.tsx
+│   │   ├── HeroSection.tsx
+│   │   ├── NewsLatterSection.tsx
+│   │   ├── ProductSection.tsx
+│   │   ├── ReviewSection.tsx
+│   │   └── TrainingSection.tsx
+│   │
+│   ├── shared/
+│   │   ├── Footer.tsx
+│   │   └── Navbar.tsx
+│   │
+│   ├── lib/
+│   ├── proxy.ts
+│   │
+│   ├── types/
+│   
+│   
+│
+├── .gitignore
+├── eslint.config.mjs
+├── next-env.d.ts
+├── next.config.ts
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── README.md
+└── tsconfig.json
 </code></pre>
 
 <h2>⚙️ Environment Variables</h2>
