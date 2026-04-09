@@ -6,6 +6,7 @@ import { api } from "@/lib/api";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Link from "next/link";
+import { toast } from "sonner";
 
 type LoginType = {
   email: string;
@@ -16,11 +17,22 @@ export default function LoginForm() {
   const router = useRouter();
   const [error, setError] = useState("");
 
+  const demoCredentials = {
+    email: "isratbiswas78@gmail.com",
+    password: "123456789",
+  };
+
   const {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
+    setValue,
   } = useForm<LoginType>();
+
+  const handleDemoFill = () => {
+    setValue("email", demoCredentials.email);
+    setValue("password", demoCredentials.password);
+  };
 
   const onSubmit = async (data: LoginType) => {
     setError("");
@@ -36,21 +48,21 @@ export default function LoginForm() {
       if (!token) throw new Error("Token not found");
 
       document.cookie = `token=${token}; path=/; max-age=864000`;
+      toast.success("Logged In Successfully");
       router.push("/");
     } catch (err: any) {
       setError(err?.response?.data?.message || "Login failed");
+      toast.error("logged IN Failed");
     }
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white dark:bg-black p-4 sm:p-6">
+    <div className="min-h-screen mt-12 flex items-center justify-center bg-white dark:bg-black p-4 sm:p-6">
       <div className="w-full max-w-sm sm:max-w-md md:max-w-lg bg-black rounded-3xl sm:rounded-[40px] p-6 sm:p-8 md:p-10 shadow-2xl border border-gray-900 relative overflow-hidden">
-        {/* Glow */}
         <div className="absolute top-0 right-0 w-24 h-24 sm:w-32 sm:h-32 bg-[#84cc16] blur-[80px] sm:blur-[100px] opacity-10"></div>
 
         <div className="relative z-10">
-          {/* Header */}
-          <div className="text-center mb-8 sm:mb-10">
+          <div className="text-center mb-8 sm:mb-6">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-white italic tracking-tighter uppercase">
               Welcome Back
             </h2>
@@ -59,19 +71,38 @@ export default function LoginForm() {
             </p>
           </div>
 
-          {/* Error */}
+          <div className="mb-6 p-4 border border-gray-800 rounded-xl bg-[#0f0f0f] text-xs text-gray-400">
+            <p className="mb-2 font-bold text-gray-300 uppercase tracking-widest">
+              Demo Credentials
+            </p>
+
+            <p>
+              Email: <span className="text-white">{demoCredentials.email}</span>
+            </p>
+            <p>
+              Password:{" "}
+              <span className="text-white">{demoCredentials.password}</span>
+            </p>
+
+            <button
+              type="button"
+              onClick={handleDemoFill}
+              className="mt-3 w-full bg-gray-800 hover:bg-gray-700 text-white py-2 rounded-lg text-xs font-bold uppercase tracking-widest"
+            >
+              Use Demo Credentials
+            </button>
+          </div>
+
           {error && (
             <div className="mb-5 p-3 sm:p-4 bg-red-500/10 border border-red-500/20 rounded-xl text-red-500 text-[11px] sm:text-xs text-center font-bold">
               {error}
             </div>
           )}
 
-          {/* Form */}
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="space-y-5 sm:space-y-6"
           >
-            {/* Email */}
             <div className="space-y-2">
               <label className="text-gray-400 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em] ml-1">
                 Email Address
@@ -98,7 +129,6 @@ export default function LoginForm() {
               )}
             </div>
 
-            {/* Password */}
             <div className="space-y-2">
               <div className="flex justify-between items-center px-1">
                 <label className="text-gray-400 text-[9px] sm:text-[10px] font-black uppercase tracking-[0.2em]">
@@ -131,7 +161,6 @@ export default function LoginForm() {
               )}
             </div>
 
-            {/* Button */}
             <button
               type="submit"
               disabled={isSubmitting}
@@ -141,7 +170,6 @@ export default function LoginForm() {
             </button>
           </form>
 
-          {/* Divider */}
           <div className="mt-8 sm:mt-10">
             <div className="relative flex items-center justify-center mb-6 sm:mb-8">
               <div className="w-full border-t border-gray-800"></div>
@@ -151,7 +179,6 @@ export default function LoginForm() {
             </div>
           </div>
 
-          {/* Footer */}
           <p className="mt-8 sm:mt-10 text-center text-gray-300 text-xs">
             Not a member yet?{" "}
             <Link

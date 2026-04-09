@@ -26,7 +26,6 @@ export default function OtpPage() {
 
   const otp = watch("otp");
 
-  // ✅ Load email
   useEffect(() => {
     const stored = localStorage.getItem("verifyEmail");
 
@@ -34,16 +33,13 @@ export default function OtpPage() {
       router.push("/register");
       return;
     }
-
     setEmail(stored);
   }, [router]);
 
-  // ✅ Focus input
   useEffect(() => {
     inputRef.current?.focus();
   }, []);
 
-  // ✅ Handle OTP input
   const handleChange = (value: string) => {
     const clean = value.replace(/\D/g, "").slice(0, 6);
 
@@ -53,7 +49,6 @@ export default function OtpPage() {
     });
   };
 
-  // ✅ Verify OTP API
   const verifyOtp = useCallback(
     async (otpValue: string) => {
       try {
@@ -88,12 +83,10 @@ export default function OtpPage() {
     [email, router, setValue],
   );
 
-  // ✅ AUTO SUBMIT (FIXED)
   useEffect(() => {
     if (otp.length === 6 && email && !hasSubmittedRef.current) {
       hasSubmittedRef.current = true;
 
-      // small delay ensures state is fully updated
       setTimeout(() => {
         verifyOtp(otp);
       }, 0);
@@ -107,14 +100,12 @@ export default function OtpPage() {
       <div className="w-full max-w-sm p-8 bg-[#111] rounded-2xl text-center">
         <h2 className="text-2xl font-bold mb-4">Verify OTP</h2>
 
-        {/* Email Display */}
         <div className="mb-6 space-y-2">
           <p className="text-gray-400 text-sm">Code sent to:</p>
 
           <p className="text-white font-semibold break-all">{email}</p>
         </div>
 
-        {/* OTP Input */}
         <div className="relative" onClick={() => inputRef.current?.focus()}>
           <input
             {...rest}
@@ -131,7 +122,6 @@ export default function OtpPage() {
             className="absolute opacity-0 w-0 h-0"
           />
 
-          {/* OTP Boxes */}
           <div className="flex justify-between gap-2 mb-6 cursor-text">
             {[...Array(6)].map((_, i) => (
               <div
@@ -148,7 +138,6 @@ export default function OtpPage() {
           </div>
         </div>
 
-        {/* Loading */}
         {loading && (
           <p className="text-sm text-green-400 animate-pulse">Verifying...</p>
         )}

@@ -1,38 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🏋️‍♂️ PowerGrid Fitness
 
-## Getting Started
+PowerGrid Fitness is a modern, responsive web application designed for fitness enthusiasts. It provides a seamless user experience for exploring fitness content, managing interactions, and building a strong online fitness presence.
 
-First, run the development server:
+<h4>Live Link:<a href="https://powergrid-fitness.vercel.app/">PowerGrid Fitness</a></h4>
 
-```bash
+🚀 Tech Stack
+Frontend Framework: Next.js (App Router)
+Language: TypeScript
+UI Library: React
+Styling: Tailwind CSS
+Animations: Framer Motion
+Form Handling: React Hook Form
+HTTP Client: Axios
+Notifications: Sonner
+Icons: React Icons
+✨ Features
+⚡ Fast and optimized performance with Next.js
+🎨 Modern UI with Tailwind CSS
+📱 Fully responsive design
+🔄 Smooth animations using Framer Motion
+🧾 Form handling with validation (React Hook Form)
+🔔 Toast notifications for user feedback
+🌐 API integration using Axios
+🧩 Modular and scalable component architecture
+📦 Installation
+
+1. Clone the repository
+   git clone https://github.com/your-username/powergrid_fitness.git
+   cd powergrid_fitness
+2. Install dependencies
+   npm install
+
+or
+
+yarn install
+▶️ Running the Application
+Development mode
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The app will run at:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+http://localhost:3000
+Production build
+npm run build
+Start production server
+npm run start
+🧪 Linting
+npm run lint
+📁 Project Structure (Example)
+powergrid_fitness/
+├── app/ # Next.js app router pages
+├── components/ # Reusable UI components
+├── lib/ # Utility functions & API config
+├── public/ # Static assets
+├── styles/ # Global styles
+├── types/ # TypeScript types
+└── package.json
+⚙️ Environment Variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create a .env.local file in the root directory:
 
-## Learn More
+NEXT_PUBLIC_API_URL=your_api_url_here
+📌 Scripts Overview
+Command Description
+npm run dev Runs the app in development mode
+npm run build Builds the app for production
+npm run start Starts the production server
+npm run lint Runs ESLint checks
+🤝 Contributing
 
-To learn more about Next.js, take a look at the following resources:
+Contributions are welcome!
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Fork the repository
+Create a new branch
+Make your changes
+Submit a pull request
+📄 License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is licensed under the MIT License.
 
-## Deploy on Vercel
+👨‍💻 Author
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# Softvence_landing_page
-# Softvence_landing_page
+Developed by a passionate full-stack developer focused on building scalable and modern web applications.

@@ -2,7 +2,7 @@ import React from "react";
 
 const NewsletterSection = () => {
   return (
-    <section className="px-4 py-16 bg-white">
+    <section className="px-4 py-16 bg-white mt-16 lg:mt-42">
       <div className="max-w-6xl mx-auto bg-black rounded-[40px] p-8 md:p-16 text-center text-white relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none"></div>
 
@@ -52,6 +52,7 @@ const NewsletterSection = () => {
           </div>
         </div>
       </div>
+      <hr className="mt-16 lg:mt-48 lg:ml-28 lg:mr-28  border-gray-300" />
     </section>
   );
 };

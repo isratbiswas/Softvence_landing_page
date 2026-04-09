@@ -7,7 +7,7 @@ import { IoStarHalf } from "react-icons/io5";
 import { motion, Variants, easeOut } from "framer-motion";
 
 const reviews = [
-  { id: 1, img: "/assets/man.png " },
+  { id: 1, img: "/assets/man.png" },
   { id: 2, img: "/assets/man (1).png" },
   { id: 3, img: "/assets/man (2).png" },
   { id: 4, img: "/assets/man (3).png" },
@@ -15,7 +15,6 @@ const reviews = [
   { id: 6, img: "/assets/man (5).png" },
 ];
 
-// Animation variants
 const containerVariants = {
   hidden: { opacity: 0 },
   show: {
@@ -40,7 +39,7 @@ const cardVariants: Variants = {
 
 const ReviewSection = () => {
   return (
-    <section className="bg-[#f3f4f6] py-16 px-6 md:px-12 lg:px-20 rounded-[40px]">
+    <section className=" py-16 px-6 mt-16 lg:mt-42 md:px-12 lg:px-20 rounded-[40px]">
       <div className="mb-12">
         <h3 className="text-3xl font-bold text-gray-700 mb-2">
           What Our Clients Are Saying

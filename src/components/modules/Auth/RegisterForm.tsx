@@ -50,7 +50,7 @@ export default function RegisterForm() {
   };
 
   return (
-    <div className="min-h-screen bg-white flex items-center justify-center p-6 font-sans">
+    <div className="min-h-screen sm:mt-12 bg-white flex items-center justify-center p-6 font-sans">
       <div className="max-w-2xl w-full bg-black rounded-[40px] p-8 md:p-16 shadow-2xl relative overflow-hidden border border-gray-900">
         <div className="absolute top-0 right-0 w-48 h-48 bg-[#84cc16] blur-[120px] opacity-10"></div>
 

@@ -7,11 +7,9 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="absolute mt-8 top-4 left-0 right-0 z-50 flex items-center justify-between px-6">
-      {/* 1. Logo Island: Rounded white container with the green circle */}
+    <nav className="absolute lg:mt-8 top-4 left-0 right-0 z-50 flex items-center justify-between px-6">
       <div className="bg-white p-2 rounded-full shadow-lg">
         <div className="w-12 h-12 bg-[#7EC832] rounded-full flex items-center justify-center">
-          {/* Using a simpler grid-style icon to match the image */}
           <div className="grid grid-cols-2 gap-1">
             <div className="w-2 h-2 border-2 border-white rounded-sm rotate-45" />
             <div className="w-2 h-2 border-2 border-white rounded-sm rotate-45" />
@@ -21,7 +19,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* 2. Nav Island: The dark pill container */}
       <div className="hidden md:flex items-center bg-black/90 border border-white/20 rounded-full px-8 py-3 gap-8">
         <Link
           href="/"
@@ -39,7 +36,6 @@ export default function Navbar() {
 
         <div className="w-px h-5 bg-white/30" />
 
-        {/* Search Pill inside the Nav Pill */}
         <div className="flex items-center bg-white/10 rounded-full pl-4 pr-1 py-1 gap-3">
           <span className="text-gray-300 text-xs font-medium">Search</span>
           <button className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
@@ -60,7 +56,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* 3. Register Island: Large green pill with custom rounding */}
       <div className="hidden md:block">
         <Link href="/register">
           <button className="bg-[#7EC832] text-white font-black text-lg px-12 py-5 rounded-full hover:bg-[#6db82a] transition-all shadow-xl uppercase tracking-tighter">
@@ -69,7 +64,6 @@ export default function Navbar() {
         </Link>
       </div>
 
-      {/* Mobile Hamburger (simplified) */}
       <button
         className="md:hidden p-3 bg-black rounded-full"
         onClick={() => setMenuOpen(!menuOpen)}

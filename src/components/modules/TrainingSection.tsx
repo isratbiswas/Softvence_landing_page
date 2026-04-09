@@ -28,7 +28,7 @@ const fadeUp: Variants = {
 
 const TrainingSection = () => {
   return (
-    <section className="bg-white py-16 px-6 md:px-12 lg:px-20">
+    <section className="bg-white mt-16 lg:mt-42 py-16 px-6 md:px-12 lg:px-20">
       <motion.div
         className="mb-10 max-w-7xl mx-auto"
         initial="hidden"
